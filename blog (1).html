@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="CSC Insights — Practical writing from inside beauty product development. Packaging, formulation, manufacturing, regulatory, and the conversations nobody else is having.">
+<title>Insights — Creative Solutions Consulting</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --iv:#F7F4EE;--iv2:#EDE9DF;--iv3:#E5E0D4;
+  --st1:#E8E4DC;--st3:#C4BDB0;--st5:#9A9389;--st7:#6B6560;
+  --ch:#2A2724;--chs:#3D3A36;
+  --gd:#C8A96E;--gdl:#E2D0A8;--gdp:#F3EDD8;
+  --rl:rgba(100,95,88,0.14);--rls:rgba(100,95,88,0.28);
+  --serif:'Cormorant Garamond',Georgia,serif;
+  --sans:'Inter',system-ui,sans-serif;
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);color:var(--ch);background:var(--iv);line-height:1.7;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%;height:auto}
+
+/* NAV */
+nav{background:var(--ch);padding:0 clamp(1.25rem,4vw,2.5rem);display:flex;align-items:center;justify-content:space-between;height:64px;border-bottom:0.5px solid rgba(200,169,110,0.18);position:sticky;top:0;z-index:100}
+.nav-logo{font-family:var(--serif);font-size:15px;letter-spacing:0.06em;color:var(--gdl);font-style:italic}
+.nav-logo span{font-style:normal;color:var(--st5);font-size:10px;letter-spacing:0.16em;text-transform:uppercase;display:block;margin-top:-2px;font-family:var(--sans)}
+.nav-links{display:flex;gap:1.75rem;align-items:center}
+.nav-links a{font-family:var(--sans);font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--st5);transition:color 0.15s}
+.nav-links a:hover{color:var(--gdl)}
+.nav-links a.active{color:var(--gdl)}
+.nav-links a.bc-link{color:var(--gd)}
+.nav-cta{font-size:11px;letter-spacing:0.14em;text-transform:uppercase;border:0.5px solid rgba(200,169,110,0.5);color:var(--gd);padding:8px 18px;border-radius:2px;transition:background 0.15s}
+.nav-cta:hover{background:rgba(200,169,110,0.1)}
+.nav-toggle{display:none;background:none;border:none;cursor:pointer;padding:4px}
+.nav-toggle i{font-size:22px;color:var(--st5)}
+
+/* PAGE HEADER */
+.page-header{background:var(--ch);padding:clamp(3rem,6vw,5rem) clamp(1.25rem,4vw,2.5rem);text-align:center;position:relative}
+.page-header::after{content:'';position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:40px;height:1.5px;background:var(--gd)}
+.page-eyebrow{font-family:var(--sans);font-size:10.5px;letter-spacing:0.22em;text-transform:uppercase;color:var(--st5);margin-bottom:1rem}
+.page-title{font-family:var(--serif);font-size:clamp(2rem,5vw,3.2rem);font-weight:400;font-style:italic;color:var(--gdl);line-height:1.15;margin-bottom:.75rem}
+.page-sub{font-size:14px;color:rgba(200,185,165,0.7);max-width:480px;margin:0 auto;line-height:1.8}
+
+/* FILTER TABS */
+.filter-bar{padding:1.5rem clamp(1.25rem,4vw,2.5rem);border-bottom:0.5px solid var(--rl);display:flex;gap:.5rem;flex-wrap:wrap}
+.filter-btn{font-family:var(--sans);font-size:10px;letter-spacing:0.12em;text-transform:uppercase;padding:6px 14px;border-radius:2px;border:0.5px solid var(--rl);background:none;color:var(--st5);cursor:pointer;transition:all 0.15s}
+.filter-btn:hover,.filter-btn.active{background:var(--ch);color:var(--gdl);border-color:var(--ch)}
+
+/* FEATURED ARTICLE */
+.featured{padding:clamp(2.5rem,5vw,4rem) clamp(1.25rem,4vw,2.5rem)}
+.featured-inner{max-width:960px;margin:0 auto}
+.featured-label{font-family:var(--sans);font-size:9.5px;letter-spacing:0.18em;text-transform:uppercase;color:var(--gd);margin-bottom:1.25rem}
+.featured-card{display:grid;grid-template-columns:1fr 1fr;gap:0;border:0.5px solid var(--st1);border-radius:8px;overflow:hidden;background:#fff}
+.featured-img{height:100%;min-height:320px;overflow:hidden}
+.featured-img img{width:100%;height:100%;object-fit:cover;object-position:center}
+.featured-body{padding:2.5rem 2rem;display:flex;flex-direction:column;justify-content:center}
+.featured-cat{display:inline-block;font-family:var(--sans);font-size:9px;letter-spacing:0.16em;text-transform:uppercase;border:0.5px solid var(--gd);color:var(--gd);padding:3px 9px;border-radius:1px;margin-bottom:1rem}
+.featured-title{font-family:var(--serif);font-size:1.75rem;font-style:italic;font-weight:400;color:var(--ch);line-height:1.2;margin-bottom:.75rem}
+.featured-excerpt{font-size:13.5px;color:var(--st7);line-height:1.8;margin-bottom:1.5rem}
+.featured-meta{display:flex;align-items:center;justify-content:space-between}
+.featured-author{font-family:var(--sans);font-size:10.5px;color:var(--st5)}
+.read-btn{display:inline-flex;align-items:center;gap:6px;font-family:var(--sans);font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:var(--gd);transition:gap 0.15s}
+.read-btn:hover{gap:10px}
+.read-btn i{font-size:13px}
+
+/* ARTICLES GRID */
+.articles-section{padding:0 clamp(1.25rem,4vw,2.5rem) clamp(2.5rem,5vw,4rem)}
+.articles-inner{max-width:960px;margin:0 auto}
+.section-label{font-family:var(--sans);font-size:9.5px;letter-spacing:0.18em;text-transform:uppercase;color:var(--st5);margin-bottom:1.25rem;padding-bottom:.75rem;border-bottom:0.5px solid var(--rl)}
+.articles-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:12px}
+.article-card{background:#fff;border:0.5px solid var(--st1);border-radius:8px;overflow:hidden;transition:border-color 0.15s;display:flex;flex-direction:column}
+.article-card:hover{border-color:var(--gd)}
+.article-card-img{height:200px;overflow:hidden}
+.article-card-img img{width:100%;height:100%;object-fit:cover;object-position:center;transition:transform 0.3s}
+.article-card:hover .article-card-img img{transform:scale(1.03)}
+.article-card-img-ph{width:100%;height:200px;background:var(--iv2);display:flex;align-items:center;justify-content:center}
+.article-card-img-ph i{font-size:28px;color:var(--st3)}
+.article-card-body{padding:1.35rem 1.25rem 1.5rem;flex:1;display:flex;flex-direction:column}
+.article-card-cat{font-family:var(--sans);font-size:9.5px;letter-spacing:0.14em;text-transform:uppercase;color:var(--gd);margin-bottom:.5rem}
+.article-card-title{font-family:var(--serif);font-size:1.15rem;font-style:italic;color:var(--ch);line-height:1.4;margin-bottom:.5rem}
+.article-card-excerpt{font-size:12.5px;color:var(--st7);line-height:1.65;flex:1}
+.article-card-link{display:inline-flex;align-items:center;gap:5px;font-family:var(--sans);font-size:9.5px;letter-spacing:0.1em;text-transform:uppercase;color:var(--gd);margin-top:1rem;transition:gap 0.15s}
+.article-card-link:hover{gap:9px}
+.article-card-link i{font-size:12px}
+
+/* COMING SOON CARD */
+.coming-soon{background:var(--iv2);border:0.5px dashed var(--st3);border-radius:8px;padding:2rem;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;min-height:200px}
+.cs-label{font-family:var(--sans);font-size:9px;letter-spacing:0.16em;text-transform:uppercase;color:var(--st5);margin-bottom:.5rem}
+.cs-text{font-family:var(--serif);font-size:1rem;font-style:italic;color:var(--st7)}
+
+/* BC CROSSLINK */
+.bc-crosslink{background:var(--ch);padding:clamp(2.5rem,5vw,4rem) clamp(1.25rem,4vw,2.5rem);text-align:center}
+.bc-crosslink-inner{max-width:580px;margin:0 auto}
+.bc-rule{width:32px;height:1.5px;background:var(--gd);margin:0 auto 1.5rem}
+.bc-crosslink-eyebrow{font-family:var(--sans);font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:var(--st5);margin-bottom:.75rem}
+.bc-crosslink-title{font-family:var(--serif);font-size:1.6rem;font-style:italic;color:var(--gdl);line-height:1.3;margin-bottom:.75rem}
+.bc-crosslink-body{font-size:13.5px;color:rgba(200,185,165,0.7);line-height:1.8;margin-bottom:1.75rem}
+.btn-primary{display:inline-block;background:var(--gd);color:var(--ch);font-family:var(--sans);font-size:10.5px;letter-spacing:0.14em;text-transform:uppercase;padding:13px 26px;border-radius:2px;transition:background 0.15s}
+.btn-primary:hover{background:var(--gdl)}
+
+/* FOOTER */
+footer{background:var(--ch);padding:2.5rem clamp(1.25rem,4vw,2.5rem);border-top:0.5px solid rgba(200,169,110,0.14)}
+.footer-inner{max-width:960px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+.footer-brand{font-family:var(--serif);font-size:1rem;font-style:italic;color:var(--gdl)}
+.footer-nav{display:flex;gap:1.5rem}
+.footer-nav a{font-family:var(--sans);font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:var(--st5);transition:color 0.15s}
+.footer-nav a:hover{color:var(--gdl)}
+.footer-copy{font-family:var(--sans);font-size:10px;color:var(--st7);width:100%;border-top:0.5px solid rgba(255,255,255,0.06);padding-top:1.25rem;margin-top:.25rem}
+
+@media(max-width:720px){
+  .nav-links{display:none}
+  .nav-links.open{display:flex;flex-direction:column;position:fixed;top:64px;left:0;right:0;background:var(--ch);padding:1.5rem;gap:1.35rem;z-index:99;border-bottom:0.5px solid rgba(200,169,110,0.18)}
+  .nav-toggle{display:block}
+  .featured-card{grid-template-columns:1fr}
+  .featured-img{min-height:220px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">Creative Solutions Consulting<span>Beauty Product Development</span></a>
+  <div class="nav-links" id="nav-links">
+    <a href="index.html#services">Services</a>
+    <a href="index.html#method">The CSC Method</a>
+    <a href="blog.html" class="active">Insights</a>
+    <a href="index.html#beauty-confidential" class="bc-link">Beauty Confidential Podcast</a>
+    <a href="index.html#about">About</a>
+    <a href="index.html#contact" class="nav-cta">Work with me</a>
+  </div>
+  <button class="nav-toggle" id="nav-toggle" aria-label="Open menu">
+    <i class="ti ti-menu-2"></i>
+  </button>
+</nav>
+
+<!-- PAGE HEADER -->
+<header class="page-header">
+  <div class="page-eyebrow">Creative Solutions Consulting</div>
+  <h1 class="page-title">Insights</h1>
+  <p class="page-sub">Practical writing from inside beauty product development — packaging, formulation, manufacturing, regulatory, and the conversations nobody else is having.</p>
+</header>
+
+<!-- FILTER BAR -->
+<div class="filter-bar">
+  <button class="filter-btn active">All</button>
+  <button class="filter-btn">Behind the Package™</button>
+  <button class="filter-btn">Commercialization Notes</button>
+  <button class="filter-btn">The Founder Files</button>
+</div>
+
+<!-- FEATURED -->
+<section class="featured">
+  <div class="featured-inner">
+    <div class="featured-label">Featured article</div>
+    <a href="behind-the-package.html" class="featured-card">
+      <div class="featured-img">
+        <img src="https://images.unsplash.com/photo-1556228578-8c89e6adf883?w=1200&q=85&auto=format&fit=crop" alt="Luxury skincare product display">
+      </div>
+      <div class="featured-body">
+        <div class="featured-cat">Behind the Package™</div>
+        <div class="featured-title">The Luxury Experience Your Packaging Report Is Missing</div>
+        <div class="featured-excerpt">Brands spend months perfecting color, decoration, and structural design — yet one of the most important aspects of the consumer experience is rarely documented. Why opening force, product reveal, and unboxing choreography matter more than most brands realize.</div>
+        <div class="featured-meta">
+          <div class="featured-author">Krystina Wilson · CSC</div>
+          <div class="read-btn">Read <i class="ti ti-arrow-right"></i></div>
+        </div>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- ALL ARTICLES -->
+<section class="articles-section">
+  <div class="articles-inner">
+    <div class="section-label">All insights</div>
+    <div class="articles-grid">
+
+      <!-- Article 1 — published -->
+      <a href="behind-the-package.html" class="article-card">
+        <div class="article-card-img">
+          <img src="https://images.unsplash.com/photo-1556228578-8c89e6adf883?w=1200&q=85&auto=format&fit=crop" alt="Luxury skincare packaging">
+        </div>
+        <div class="article-card-body">
+          <div class="article-card-cat">Behind the Package™</div>
+          <div class="article-card-title">The Luxury Experience Your Packaging Report Is Missing</div>
+          <div class="article-card-excerpt">Why opening force, product reveal, and unboxing choreography matter more than most brands realize.</div>
+          <div class="article-card-link">Read <i class="ti ti-arrow-right"></i></div>
+        </div>
+      </a>
+
+      <!-- Article 2 — live -->
+      <a href="eight-gates-beauty-launch.html" class="article-card" style="display:flex;flex-direction:column;text-decoration:none">
+        <div class="article-card-img">
+          <img src="https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=1200&q=85&auto=format&fit=crop" alt="Planning calendar and checklist">
+        </div>
+        <div class="article-card-body">
+          <div class="article-card-cat">Commercialization Notes</div>
+          <div class="article-card-title">The Eight Gates Every Beauty Launch Must Clear</div>
+          <div class="article-card-excerpt">Artwork, tooling, regulatory, supply chain, manufacturing, claims, demand planning, and timeline. Why each one matters and what happens when they are missed.</div>
+          <span class="article-card-link">Read <i class="ti ti-arrow-right"></i></span>
+        </div>
+      </a>
+
+      <!-- Article 3 — live -->
+      <a href="founder-packaging-suppliers.html" class="article-card" style="display:flex;flex-direction:column;text-decoration:none">
+        <div class="article-card-img">
+          <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=600&q=85&auto=format&fit=crop&crop=center" alt="Packaging supplier">
+        </div>
+        <div class="article-card-body">
+          <div class="article-card-cat">The Founder Files</div>
+          <div class="article-card-title">What Indie Founders Get Wrong About Manufacturing and Packaging Partners</div>
+          <div class="article-card-excerpt">Single-source risk, MOQs, tooling ownership, formula ownership, and the questions every founder should ask before signing anything.</div>
+          <span class="article-card-link">Read <i class="ti ti-arrow-right"></i></span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- BEAUTY CONFIDENTIAL CROSSLINK -->
+<div class="bc-crosslink">
+  <div class="bc-crosslink-inner">
+    <div class="bc-rule"></div>
+    <div class="bc-crosslink-eyebrow">Beauty Confidential Podcast</div>
+    <div class="bc-crosslink-title">Hear how industry leaders are solving similar challenges.</div>
+    <div class="bc-crosslink-body">Every episode of Beauty Confidential surfaces the hard questions beauty brands face — and connects them back to real-world expertise in product development, packaging, regulatory, and commercialization.</div>
+    <a href="https://open.spotify.com/show/4SjmbsKrMWweE0AK68aKtX?si=306eea2a7afa4abe" target="_blank" rel="noopener" class="btn-primary">Listen on Spotify</a>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">Creative Solutions Consulting</div>
+    <nav class="footer-nav">
+      <a href="index.html">Home</a>
+      <a href="blog.html">Insights</a>
+      <a href="index.html#contact">Work with me</a>
+    </nav>
+    <div class="footer-copy">© 2025 Creative Solutions Consulting · All rights reserved · Krystina Wilson</div>
+  </div>
+</footer>
+
+<script>
+var toggle = document.getElementById('nav-toggle');
+var links = document.getElementById('nav-links');
+if(toggle){
+  toggle.addEventListener('click', function(){
+    var open = links.classList.toggle('open');
+    this.querySelector('i').className = open ? 'ti ti-x' : 'ti ti-menu-2';
+  });
+}
+document.querySelectorAll('.filter-btn').forEach(function(btn){
+  btn.addEventListener('click', function(){
+    document.querySelectorAll('.filter-btn').forEach(function(b){ b.classList.remove('active'); });
+    this.classList.add('active');
+  });
+});
+</script>
+</body>
+</html>
