@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="CSC Insights — Practical writing from inside beauty product development.">
-<title>Insights — Creative Solutions Consulting</title>
+<meta name="description" content="Work with Creative Solutions Consulting — beauty product development, packaging strategy, regulatory, and commercialization support.">
+<title>Work with CSC — Creative Solutions Consulting</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.19.0/dist/tabler-icons.min.css">
 <style>
@@ -90,29 +90,19 @@ footer{background:var(--ch);padding:2.5rem clamp(1.25rem,4vw,2.5rem);border-top:
   .nav-toggle{display:block}
 }
 
-.article-card-img{height:200px;overflow:hidden}
-.article-card-img img{width:100%;height:100%;object-fit:cover;transition:transform 0.3s}
-.article-card:hover .article-card-img img{transform:scale(1.03)}
-.article-card-img-ph{width:100%;height:200px;background:var(--iv2);display:flex;align-items:center;justify-content:center}
-.article-card-img-ph i{font-size:28px;color:var(--st3)}
-.article-card-body{padding:1.35rem 1.25rem 1.5rem;flex:1;display:flex;flex-direction:column}
-.article-card-cat{font-family:var(--sans);font-size:9.5px;letter-spacing:0.14em;text-transform:uppercase;color:var(--gd);margin-bottom:.5rem}
-.article-card-title{font-family:var(--serif);font-size:1.15rem;font-style:italic;color:var(--ch);line-height:1.4;margin-bottom:.5rem}
-.article-card-excerpt{font-size:12.5px;color:var(--st7);line-height:1.65;flex:1}
-.article-card-link{display:inline-flex;align-items:center;gap:5px;font-family:var(--sans);font-size:9.5px;letter-spacing:0.1em;text-transform:uppercase;color:var(--gd);margin-top:1rem;transition:gap 0.15s}
-.article-card-link:hover{gap:9px}
-.article-card{background:#fff;border:0.5px solid var(--st1);border-radius:8px;overflow:hidden;transition:border-color 0.15s;display:flex;flex-direction:column}
-.article-card:hover{border-color:var(--gd)}
-.featured-card{display:grid;grid-template-columns:1fr 1fr;gap:0;border:0.5px solid var(--st1);border-radius:8px;overflow:hidden;background:#fff}
-.featured-img{min-height:320px;overflow:hidden}
-.featured-img img{width:100%;height:100%;object-fit:cover}
-.featured-body{padding:2.5rem 2rem;display:flex;flex-direction:column;justify-content:center}
-.featured-cat{display:inline-block;font-family:var(--sans);font-size:9px;letter-spacing:0.16em;text-transform:uppercase;border:0.5px solid var(--gd);color:var(--gd);padding:3px 9px;border-radius:1px;margin-bottom:1rem}
-.featured-title{font-family:var(--serif);font-size:1.75rem;font-style:italic;font-weight:400;color:var(--ch);line-height:1.2;margin-bottom:.75rem}
-.featured-excerpt{font-size:13.5px;color:var(--st7);line-height:1.8;margin-bottom:1.5rem}
-.read-btn{display:inline-flex;align-items:center;gap:6px;font-family:var(--sans);font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:var(--gd);transition:gap 0.15s}
-.read-btn:hover{gap:10px}
-@media(max-width:680px){.featured-card{grid-template-columns:1fr}.featured-img{min-height:220px}}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2.5rem,5vw,4.5rem);align-items:start}
+.contact-form{display:flex;flex-direction:column;gap:12px}
+.contact-form input,.contact-form textarea,.contact-form select{width:100%;padding:13px 15px;font-size:14px;font-family:var(--sans);background:#fff;border:0.5px solid var(--rls);border-radius:4px;color:var(--ch);outline:none;transition:border-color 0.15s;-webkit-appearance:none}
+.contact-form input:focus,.contact-form textarea:focus,.contact-form select:focus{border-color:var(--gd)}
+.contact-form textarea{min-height:130px;resize:vertical}
+.contact-form .submit{background:var(--ch);color:var(--gdl);font-family:var(--sans);font-size:11px;letter-spacing:0.16em;text-transform:uppercase;padding:14px;border:none;border-radius:2px;cursor:pointer;transition:background 0.15s}
+.contact-form .submit:hover{background:var(--chs)}
+.ci-block{display:flex;gap:14px;align-items:flex-start;margin-bottom:1.35rem}
+.ci-icon{font-size:18px;color:var(--gd);flex-shrink:0;margin-top:2px}
+.ci-label{font-family:var(--sans);font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:var(--st5);margin-bottom:3px}
+.ci-val{font-size:14px;color:var(--chs)}
+.ci-val a{color:var(--gd)}
+@media(max-width:720px){.contact-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -122,9 +112,9 @@ footer{background:var(--ch);padding:2.5rem clamp(1.25rem,4vw,2.5rem);border-top:
     <a href="services.html" class="">Services</a>
     <a href="method.html" class="">The CSC Method™</a>
     <a href="about.html" class="">About</a>
-    <a href="blog.html" class="active">Insights</a>
+    <a href="blog.html" class="">Insights</a>
     <a href="beauty-confidential.html" class="bc-link ">Beauty Confidential Podcast</a>
-    <a href="contact.html" class="nav-cta ">Work with me</a>
+    <a href="contact.html" class="nav-cta active">Work with me</a>
   </div>
   <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false">
     <i class="ti ti-menu-2"></i>
@@ -132,70 +122,52 @@ footer{background:var(--ch);padding:2.5rem clamp(1.25rem,4vw,2.5rem);border-top:
 </nav>
 
 <header class="page-hero">
-  <div class="page-hero-eyebrow">Insights</div>
-  <h1 class="page-hero-title">Ideas, observations, and industry thinking.</h1>
-  <p class="page-hero-sub">Practical writing from inside beauty product development across packaging, formulation, manufacturing, regulatory, and the conversations nobody else is having.</p>
+  <div class="page-hero-eyebrow">Work with CSC</div>
+  <h1 class="page-hero-title">Let's build your next product with clarity, intention, and commercial readiness.</h1>
+  <p class="page-hero-sub">Tell us where your brand is and where you want to go. CSC delivers a tailored scope of work to bring your vision to life.</p>
 </header>
 
 <section class="wrap" style="background:var(--iv)">
   <div class="inner">
-    <div style="font-family:var(--sans);font-size:9.5px;letter-spacing:0.18em;text-transform:uppercase;color:var(--gd);margin-bottom:1.25rem">Featured article</div>
-    <a href="behind-the-package.html" class="featured-card" style="text-decoration:none;display:grid">
-      <div class="featured-img">
-        <img src="https://images.unsplash.com/photo-1556228578-8c89e6adf883?w=900&q=85&auto=format&fit=crop" alt="Luxury packaging">
+    <div class="contact-grid">
+      <div>
+        <div class="gold-rule"></div>
+        <div class="eyebrow">Get in touch</div>
+        <h2 class="h2" style="margin-bottom:1.25rem">Start a <em>conversation</em></h2>
+        <p class="body-text" style="margin-bottom:2rem">CSC delivers a tailored scope of work within 5 business days, phase selection, deliverable set, and timeline. No obligation, no generic pitch deck.</p>
+        <div class="ci-block"><i class="ti ti-phone ci-icon"></i><div><div class="ci-label">Phone</div><div class="ci-val"><a href="tel:7607179084">(760) 717-9084</a></div></div></div>
+        <div class="ci-block"><i class="ti ti-world ci-icon"></i><div><div class="ci-label">Website</div><div class="ci-val">creativesolutions-consulting.com</div></div></div>
+        <div class="ci-block"><i class="ti ti-player-play ci-icon"></i><div><div class="ci-label">Beauty Confidential Podcast</div><div class="ci-val"><a href="https://open.spotify.com/show/4SjmbsKrMWweE0AK68aKtX?si=306eea2a7afa4abe" target="_blank" rel="noopener">Listen on Spotify</a></div></div></div>
+        <div style="background:var(--iv2);border:0.5px solid var(--rls);border-radius:6px;padding:1.35rem 1.5rem;margin-top:2rem">
+          <div style="font-family:var(--sans);font-size:9.5px;letter-spacing:0.14em;text-transform:uppercase;color:var(--gd);margin-bottom:.5rem">What to expect</div>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:.5rem">
+            <li style="font-size:13px;color:var(--st7);padding-left:1rem;position:relative">Response within 1 business day</li>
+            <li style="font-size:13px;color:var(--st7);padding-left:1rem;position:relative">Tailored scope within 5 business days</li>
+            <li style="font-size:13px;color:var(--st7);padding-left:1rem;position:relative">No obligation, no generic pitch deck</li>
+            <li style="font-size:13px;color:var(--st7);padding-left:1rem;position:relative">Clear phase selection and timeline</li>
+          </ul>
+        </div>
       </div>
-      <div class="featured-body">
-        <div class="featured-cat">Behind the Package™</div>
-        <div class="featured-title">The Luxury Experience Your Packaging Report Is Missing</div>
-        <div class="featured-excerpt">Brands spend months perfecting color, decoration, and structural design, yet one of the most important aspects of the consumer experience is rarely documented. Why opening force, product reveal, and unboxing choreography matter more than most brands realize.</div>
-        <div class="read-btn">Read <i class="ti ti-arrow-right" style="font-size:13px"></i></div>
+      <div>
+        <form class="contact-form" action="ACTION_URL" method="POST">
+          <input type="text" name="name" placeholder="Your name" required>
+          <input type="email" name="email" placeholder="Email address" required>
+          <input type="text" name="brand" placeholder="Brand or project name">
+          <select name="stage">
+            <option value="" disabled selected>What stage is your project?</option>
+            <option>Early concept, I have an idea</option>
+            <option>Formula stage, working with a lab</option>
+            <option>Packaging, need engineering and sourcing</option>
+            <option>Pre-launch, need commercialization support</option>
+            <option>Post-launch, line extensions and growth</option>
+            <option>Full lifecycle, I need a partner from the start</option>
+          </select>
+          <textarea name="message" placeholder="Tell me about your brand and what you're building..." required></textarea>
+          <button type="submit" class="submit">Send inquiry</button>
+        </form>
+        <p style="font-size:11px;color:var(--st5);margin-top:.75rem;font-style:italic;font-family:var(--serif)">To activate form submissions, connect this form to Formspree.io and replace ACTION_URL above.</p>
       </div>
-    </a>
-  </div>
-</section>
-
-<section class="wrap section-iv2">
-  <div class="inner">
-    <div style="font-family:var(--sans);font-size:9.5px;letter-spacing:0.18em;text-transform:uppercase;color:var(--st5);margin-bottom:1.25rem;padding-bottom:.75rem;border-bottom:0.5px solid var(--rl)">All insights</div>
-    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:12px">
-      <a href="behind-the-package.html" class="article-card" style="text-decoration:none">
-        <div class="article-card-img"><img src="https://images.unsplash.com/photo-1556228578-8c89e6adf883?w=600&q=85&auto=format&fit=crop" alt="Luxury packaging"></div>
-        <div class="article-card-body">
-          <div class="article-card-cat">Behind the Package™</div>
-          <div class="article-card-title">The luxury experience your packaging report is missing</div>
-          <div class="article-card-excerpt">Why opening force, product reveal, and unboxing choreography matter more than most brands realize.</div>
-          <span class="article-card-link">Read <i class="ti ti-arrow-right"></i></span>
-        </div>
-      </a>
-      <a href="eight-gates-beauty-launch.html" class="article-card" style="text-decoration:none">
-        <div class="article-card-img"><img src="https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=600&q=85&auto=format&fit=crop&crop=center" alt="Planning and timeline"></div>
-        <div class="article-card-body">
-          <div class="article-card-cat">Commercialization Notes</div>
-          <div class="article-card-title">The eight gates every beauty launch must clear</div>
-          <div class="article-card-excerpt">Artwork, tooling, regulatory, supply chain, manufacturing, claims, demand planning, and timeline. What each one means and why it matters.</div>
-          <span class="article-card-link">Read <i class="ti ti-arrow-right"></i></span>
-        </div>
-      </a>
-      <a href="founder-packaging-suppliers.html" class="article-card" style="text-decoration:none">
-        <div class="article-card-img"><img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=600&q=85&auto=format&fit=crop&crop=center" alt="Business partnership"></div>
-        <div class="article-card-body">
-          <div class="article-card-cat">The Founder Files</div>
-          <div class="article-card-title">What indie founders get wrong about manufacturing and packaging partners</div>
-          <div class="article-card-excerpt">Single-source risk, MOQs, tooling ownership, formula ownership, and the questions every founder should ask before signing anything.</div>
-          <span class="article-card-link">Read <i class="ti ti-arrow-right"></i></span>
-        </div>
-      </a>
     </div>
-  </div>
-</section>
-
-<section class="wrap section-dark" style="text-align:center">
-  <div class="inner-sm">
-    <div style="width:40px;height:1px;background:var(--gd);margin:0 auto 1.5rem"></div>
-    <div style="font-family:var(--sans);font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:var(--st5);margin-bottom:.75rem">Beauty Confidential Podcast</div>
-    <h2 class="h2 on-dark" style="margin-bottom:.75rem">Hear how industry leaders are solving these challenges.</h2>
-    <p style="font-size:13.5px;color:rgba(200,185,165,0.7);line-height:1.8;margin-bottom:1.75rem">Every episode surfaces the hard questions beauty brands face, connecting them to real expertise in product development, packaging, regulatory, and commercialization.</p>
-    <a href="https://open.spotify.com/show/4SjmbsKrMWweE0AK68aKtX?si=306eea2a7afa4abe" target="_blank" rel="noopener" class="btn btn-primary">Listen on Spotify</a>
   </div>
 </section>
 

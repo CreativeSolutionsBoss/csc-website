@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="The CSC Method™ — a five-phase structured commercialization process guiding beauty brands from concept to shelf.">
+<title>The CSC Method™ — Creative Solutions Consulting</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.19.0/dist/tabler-icons.min.css">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --iv:#F7F4EE;--iv2:#EDE9DF;--iv3:#E5E0D4;
+  --st1:#E8E4DC;--st3:#C4BDB0;--st5:#9A9389;--st7:#6B6560;
+  --ch:#2A2724;--chs:#3D3A36;
+  --gd:#C8A96E;--gdl:#E2D0A8;--gdp:#F3EDD8;
+  --rl:rgba(100,95,88,0.14);--rls:rgba(100,95,88,0.28);
+  --serif:'Cormorant Garamond',Georgia,serif;
+  --sans:'Inter',system-ui,sans-serif;
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);color:var(--ch);background:var(--iv);line-height:1.7;font-size:16px;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%;height:auto}
+
+/* NAV */
+nav{background:var(--ch);padding:0 clamp(1.25rem,4vw,2.5rem);display:flex;align-items:center;justify-content:space-between;height:64px;border-bottom:0.5px solid rgba(200,169,110,0.18);position:sticky;top:0;z-index:100}
+.nav-logo{font-family:var(--serif);font-size:15px;letter-spacing:0.06em;color:var(--gdl);font-style:italic;white-space:nowrap}
+.nav-logo span{font-style:normal;color:var(--st5);font-size:10px;letter-spacing:0.16em;text-transform:uppercase;display:block;margin-top:-2px;font-family:var(--sans)}
+.nav-links{display:flex;gap:1.75rem;align-items:center}
+.nav-links a{font-family:var(--sans);font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--st5);transition:color 0.15s;white-space:nowrap}
+.nav-links a:hover,.nav-links a.active{color:var(--gdl)}
+.nav-links a.bc-link{color:var(--gd)}
+.nav-links a.bc-link:hover{color:var(--gdl)}
+.nav-cta{font-size:11px;letter-spacing:0.14em;text-transform:uppercase;border:0.5px solid rgba(200,169,110,0.5);color:var(--gd);padding:8px 18px;border-radius:2px;transition:background 0.15s}
+.nav-cta:hover{background:rgba(200,169,110,0.1);border-color:var(--gd)}
+.nav-toggle{display:none;background:none;border:none;cursor:pointer;padding:4px}
+.nav-toggle i{font-size:22px;color:var(--st5)}
+
+/* SHARED LAYOUT */
+.wrap{padding:clamp(3.5rem,6vw,5.5rem) clamp(1.25rem,4vw,2.5rem)}
+.inner{max-width:960px;margin:0 auto}
+.inner-sm{max-width:720px;margin:0 auto}
+.gold-rule{width:32px;height:1.5px;background:var(--gd);margin-bottom:1.35rem}
+.eyebrow{font-family:var(--sans);font-size:10.5px;letter-spacing:0.22em;text-transform:uppercase;color:var(--gd);margin-bottom:.75rem}
+.eyebrow.muted{color:var(--st5)}
+.h1{font-family:var(--serif);font-size:clamp(2.4rem,5.5vw,3.8rem);font-weight:400;font-style:italic;color:var(--gdl);line-height:1.1;margin-bottom:1.25rem}
+.h2{font-family:var(--serif);font-size:clamp(1.75rem,3.5vw,2.6rem);font-weight:400;font-style:italic;color:var(--ch);line-height:1.2;margin-bottom:1rem}
+.h2 em{font-style:normal;color:var(--gd)}
+.h2.on-dark{color:var(--gdl)}
+.h3{font-family:var(--serif);font-size:1.4rem;font-weight:400;font-style:italic;color:var(--ch);margin-bottom:.6rem}
+.body-text{font-size:14.5px;color:var(--st7);line-height:1.9}
+.rule{height:0.5px;background:var(--rl);margin:1.75rem 0}
+.section-dark{background:var(--ch)}
+.section-iv2{background:var(--iv2);border-top:0.5px solid var(--rl);border-bottom:0.5px solid var(--rl)}
+.section-iv3{background:var(--iv3);border-top:0.5px solid var(--rl)}
+
+/* BUTTONS */
+.btn{display:inline-block;font-family:var(--sans);font-size:11px;letter-spacing:0.14em;text-transform:uppercase;padding:13px 28px;border-radius:2px;cursor:pointer;text-decoration:none;transition:all 0.15s;border:none}
+.btn-primary{background:var(--gd);color:var(--ch)}
+.btn-primary:hover{background:var(--gdl)}
+.btn-ghost{background:none;color:var(--gdl);border:0.5px solid rgba(200,169,110,0.35)}
+.btn-ghost:hover{border-color:var(--gd)}
+.btn-sm{padding:10px 20px;font-size:10px}
+
+/* PAGE HERO (dark) */
+.page-hero{background:var(--ch);padding:clamp(4rem,7vw,6rem) clamp(1.25rem,4vw,2.5rem);position:relative}
+.page-hero::after{content:'';position:absolute;bottom:0;left:clamp(1.25rem,4vw,2.5rem);width:40px;height:1.5px;background:var(--gd)}
+.page-hero-eyebrow{font-family:var(--sans);font-size:10.5px;letter-spacing:0.22em;text-transform:uppercase;color:var(--st5);margin-bottom:1rem}
+.page-hero-title{font-family:var(--serif);font-size:clamp(2rem,5vw,3.2rem);font-weight:400;font-style:italic;color:var(--gdl);line-height:1.1;margin-bottom:.85rem;max-width:700px}
+.page-hero-sub{font-size:14px;color:rgba(200,185,165,0.75);max-width:540px;line-height:1.85}
+
+/* FOOTER */
+footer{background:var(--ch);padding:2.5rem clamp(1.25rem,4vw,2.5rem);border-top:0.5px solid rgba(200,169,110,0.14)}
+.footer-inner{max-width:960px;margin:0 auto}
+.footer-top{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:2rem;padding-bottom:1.5rem;border-bottom:0.5px solid rgba(255,255,255,0.06)}
+.footer-brand-name{font-family:var(--serif);font-size:1.05rem;font-style:italic;color:var(--gdl)}
+.footer-brand-tag{font-family:var(--sans);font-size:9.5px;letter-spacing:0.14em;text-transform:uppercase;color:var(--st5);margin-top:3px}
+.footer-nav{display:flex;flex-wrap:wrap;gap:.75rem 2rem;align-self:flex-start;margin-top:.35rem}
+.footer-nav a{font-family:var(--sans);font-size:10.5px;letter-spacing:0.12em;text-transform:uppercase;color:var(--st5);transition:color 0.15s}
+.footer-nav a:hover{color:var(--gdl)}
+.footer-nav a.bc-link{color:var(--gd)}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.5rem;padding-top:1.25rem}
+.footer-copy{font-family:var(--sans);font-size:10px;color:var(--st7)}
+
+/* MOBILE */
+@media(max-width:720px){
+  .nav-links{display:none}
+  .nav-links.open{display:flex;flex-direction:column;position:fixed;top:64px;left:0;right:0;background:var(--ch);padding:1.5rem;border-bottom:0.5px solid rgba(200,169,110,0.18);gap:1.35rem;z-index:99}
+  .nav-toggle{display:block}
+}
+
+/* METHOD GRID */
+.method-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--rl);border:0.5px solid var(--rl);margin-top:2.5rem}
+.mc{background:var(--iv);padding:2rem 1.6rem}
+.mc-num{font-family:var(--sans);font-size:9.5px;letter-spacing:0.14em;text-transform:uppercase;color:var(--gd);margin-bottom:.5rem}
+.mc-name{font-family:var(--serif);font-size:1.2rem;font-style:italic;color:var(--ch);line-height:1.2;margin-bottom:.4rem}
+.mc-focus{display:inline-block;font-family:var(--sans);font-size:8.5px;letter-spacing:0.16em;text-transform:uppercase;background:var(--ch);color:var(--gdl);padding:3px 9px;border-radius:1px;margin-bottom:1.1rem}
+.mc-divider{width:24px;height:1px;background:var(--gd);margin-bottom:.9rem}
+.mc-pillars{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:.45rem}
+.mc-pillars li{font-family:var(--sans);font-size:11.5px;color:var(--st7);line-height:1.5;padding-left:1.1rem;position:relative}
+.mc-pillars li::before{content:'';width:4px;height:4px;border-radius:50%;background:var(--gd);position:absolute;left:0;top:7px}
+
+/* PHASE DETAIL SECTIONS */
+.phase-section{padding:clamp(3rem,5vw,4.5rem) clamp(1.25rem,4vw,2.5rem);border-top:0.5px solid var(--rl)}
+.phase-inner{max-width:960px;margin:0 auto;display:grid;grid-template-columns:1fr 2fr;gap:clamp(2rem,4vw,4rem);align-items:start}
+.phase-num-block{position:relative}
+.phase-big-num{font-family:var(--serif);font-size:6rem;font-style:italic;color:var(--gdp);line-height:1;margin-bottom:-.5rem}
+.phase-name-large{font-family:var(--serif);font-size:1.75rem;font-style:italic;color:var(--ch);margin-bottom:.25rem}
+.phase-focus-large{display:inline-block;font-family:var(--sans);font-size:9px;letter-spacing:0.16em;text-transform:uppercase;background:var(--ch);color:var(--gdl);padding:4px 10px;border-radius:1px}
+.phase-body{font-size:13.5px;color:var(--st7);line-height:1.85;margin-bottom:1.25rem}
+.phase-pillars{display:grid;grid-template-columns:1fr 1fr;gap:.5rem .75rem;margin-top:1rem}
+.phase-pillar{font-family:var(--sans);font-size:12px;color:var(--chs);padding:.5rem .75rem;background:var(--iv2);border:0.5px solid var(--rl);border-radius:4px}
+
+@media(max-width:800px){.method-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:560px){.method-grid{grid-template-columns:1fr 1fr}.phase-inner{grid-template-columns:1fr}.phase-pillars{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<nav id="nav">
+  <a href="index.html" class="nav-logo">Creative Solutions Consulting<span>Beauty Product Development</span></a>
+  <div class="nav-links" id="nav-links">
+    <a href="services.html" class="">Services</a>
+    <a href="method.html" class="active">The CSC Method™</a>
+    <a href="about.html" class="">About</a>
+    <a href="blog.html" class="">Insights</a>
+    <a href="beauty-confidential.html" class="bc-link ">Beauty Confidential Podcast</a>
+    <a href="contact.html" class="nav-cta ">Work with me</a>
+  </div>
+  <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false">
+    <i class="ti ti-menu-2"></i>
+  </button>
+</nav>
+
+<header class="page-hero">
+  <div class="page-hero-eyebrow">The CSC Method™</div>
+  <h1 class="page-hero-title">A transparent, phased approach from concept to shelf.</h1>
+  <p class="page-hero-sub">The CSC Method™ is our structured commercialization process that guides beauty brands from early strategy through market growth. Each phase is designed to build on the last, bringing clarity, accountability, and momentum to every launch.</p>
+</header>
+
+<!-- METHOD OVERVIEW GRID -->
+<section class="wrap" style="background:var(--iv)">
+  <div class="inner">
+    <div class="gold-rule"></div>
+    <div class="eyebrow">At a glance</div>
+    <h2 class="h2">Five phases. <em>One connected process.</em></h2>
+    <div class="method-grid">
+      <div class="mc"><div class="mc-num">Phase 01</div><div class="mc-name">ConceptStudio™</div><div class="mc-focus">Discover</div><div class="mc-divider"></div><ul class="mc-pillars"><li>Market opportunity</li><li>Consumer insights</li><li>Competitive whitespace</li><li>Claims strategy</li></ul></div>
+      <div class="mc"><div class="mc-num">Phase 02</div><div class="mc-name">FormulaLab™</div><div class="mc-focus">Develop</div><div class="mc-divider"></div><ul class="mc-pillars"><li>Ingredient architecture</li><li>Clinical roadmap</li><li>Regulatory strategy</li><li>Formula collaboration</li></ul></div>
+      <div class="mc"><div class="mc-num">Phase 03</div><div class="mc-name">PackageIQ™</div><div class="mc-focus">Engineer</div><div class="mc-divider"></div><ul class="mc-pillars"><li>Packaging architecture</li><li>Luxury experience</li><li>Manufacturing readiness</li><li>Supplier sourcing</li></ul></div>
+      <div class="mc"><div class="mc-num">Phase 04</div><div class="mc-name">LaunchReady™</div><div class="mc-focus">Execute</div><div class="mc-divider"></div><ul class="mc-pillars"><li>Production readiness</li><li>Regulatory clearance</li><li>Timeline management</li><li>Launch execution</li></ul></div>
+      <div class="mc"><div class="mc-num">Phase 05</div><div class="mc-name">MarketForward™</div><div class="mc-focus">Grow</div><div class="mc-divider"></div><ul class="mc-pillars"><li>Consumer feedback</li><li>Portfolio expansion</li><li>Competitive intelligence</li><li>Innovation roadmap</li></ul></div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:0;margin-top:2.5rem">
+
+      <div style="padding:1.75rem 0;border-bottom:0.5px solid var(--rl);display:grid;grid-template-columns:220px 1fr;gap:2rem;align-items:start">
+        <div>
+          <div style="font-family:var(--sans);font-size:9px;letter-spacing:0.16em;text-transform:uppercase;color:var(--st5);margin-bottom:.4rem">Phase 01</div>
+          <div style="font-family:var(--serif);font-size:1.25rem;font-style:italic;color:var(--ch);margin-bottom:.6rem">ConceptStudio™</div>
+          <div style="font-family:var(--sans);font-size:8.5px;letter-spacing:0.14em;text-transform:uppercase;background:var(--ch);color:var(--gdl);display:inline-block;padding:3px 9px;border-radius:1px">Discover</div>
+        </div>
+        <p style="font-family:var(--serif);font-size:1.05rem;font-style:italic;color:var(--st7);line-height:1.75;margin:0;padding-top:.25rem">Brings together market intelligence, consumer insights, and competitive analysis to define where your product fits, what it needs to say, and how it needs to perform.</p>
+      </div>
+
+      <div style="padding:1.75rem 0;border-bottom:0.5px solid var(--rl);display:grid;grid-template-columns:220px 1fr;gap:2rem;align-items:start">
+        <div>
+          <div style="font-family:var(--sans);font-size:9px;letter-spacing:0.16em;text-transform:uppercase;color:var(--st5);margin-bottom:.4rem">Phase 02</div>
+          <div style="font-family:var(--serif);font-size:1.25rem;font-style:italic;color:var(--ch);margin-bottom:.6rem">FormulaLab™</div>
+          <div style="font-family:var(--sans);font-size:8.5px;letter-spacing:0.14em;text-transform:uppercase;background:var(--ch);color:var(--gdl);display:inline-block;padding:3px 9px;border-radius:1px">Develop</div>
+        </div>
+        <p style="font-family:var(--serif);font-size:1.05rem;font-style:italic;color:var(--st7);line-height:1.75;margin:0;padding-top:.25rem">Bridges the gap between brand vision and formulation science.</p>
+      </div>
+
+      <div style="padding:1.75rem 0;border-bottom:0.5px solid var(--rl);display:grid;grid-template-columns:220px 1fr;gap:2rem;align-items:start">
+        <div>
+          <div style="font-family:var(--sans);font-size:9px;letter-spacing:0.16em;text-transform:uppercase;color:var(--st5);margin-bottom:.4rem">Phase 03</div>
+          <div style="font-family:var(--serif);font-size:1.25rem;font-style:italic;color:var(--ch);margin-bottom:.6rem">PackageIQ™</div>
+          <div style="font-family:var(--sans);font-size:8.5px;letter-spacing:0.14em;text-transform:uppercase;background:var(--ch);color:var(--gdl);display:inline-block;padding:3px 9px;border-radius:1px">Engineer</div>
+        </div>
+        <p style="font-family:var(--serif);font-size:1.05rem;font-style:italic;color:var(--st7);line-height:1.75;margin:0;padding-top:.25rem">Evaluates packaging through the lens of structural integrity, luxury consumer experience, manufacturing feasibility, and supply chain resilience.</p>
+      </div>
+
+      <div style="padding:1.75rem 0;border-bottom:0.5px solid var(--rl);display:grid;grid-template-columns:220px 1fr;gap:2rem;align-items:start">
+        <div>
+          <div style="font-family:var(--sans);font-size:9px;letter-spacing:0.16em;text-transform:uppercase;color:var(--st5);margin-bottom:.4rem">Phase 04</div>
+          <div style="font-family:var(--serif);font-size:1.25rem;font-style:italic;color:var(--ch);margin-bottom:.6rem">LaunchReady™</div>
+          <div style="font-family:var(--sans);font-size:8.5px;letter-spacing:0.14em;text-transform:uppercase;background:var(--ch);color:var(--gdl);display:inline-block;padding:3px 9px;border-radius:1px">Execute</div>
+        </div>
+        <p style="font-family:var(--serif);font-size:1.05rem;font-style:italic;color:var(--st7);line-height:1.75;margin:0;padding-top:.25rem">Is where strategy becomes execution. This phase coordinates every workstream simultaneously.</p>
+      </div>
+
+      <div style="padding:1.75rem 0;display:grid;grid-template-columns:220px 1fr;gap:2rem;align-items:start">
+        <div>
+          <div style="font-family:var(--sans);font-size:9px;letter-spacing:0.16em;text-transform:uppercase;color:var(--st5);margin-bottom:.4rem">Phase 05</div>
+          <div style="font-family:var(--serif);font-size:1.25rem;font-style:italic;color:var(--ch);margin-bottom:.6rem">MarketForward™</div>
+          <div style="font-family:var(--sans);font-size:8.5px;letter-spacing:0.14em;text-transform:uppercase;background:var(--ch);color:var(--gdl);display:inline-block;padding:3px 9px;border-radius:1px">Grow</div>
+        </div>
+        <p style="font-family:var(--serif);font-size:1.05rem;font-style:italic;color:var(--st7);line-height:1.75;margin:0;padding-top:.25rem">Monitors performance, captures consumer feedback, and builds the strategic roadmap for what comes next.</p>
+      </div>
+
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="wrap section-dark" style="text-align:center">
+  <div class="inner-sm">
+    <div style="width:40px;height:1px;background:var(--gd);margin:0 auto 1.75rem"></div>
+    <h2 class="h2 on-dark" style="margin-bottom:1rem">Ready to put the method to work?</h2>
+    <p style="font-size:14px;color:rgba(200,185,165,0.7);line-height:1.85;margin-bottom:2rem">CSC delivers a tailored scope of work within 5 business days. Tell us where your brand is and where you want to go.</p>
+    <a href="contact.html" class="btn btn-primary">Work with CSC</a>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand-name">Creative Solutions Consulting</div>
+        <div class="footer-brand-tag">Beauty Product Development · Fallbrook, CA</div>
+      </div>
+      <nav class="footer-nav">
+        <a href="services.html">Services</a>
+        <a href="method.html">The CSC Method™</a>
+        <a href="about.html">About</a>
+        <a href="blog.html">Insights</a>
+        <a href="beauty-confidential.html" class="bc-link">Beauty Confidential Podcast</a>
+        <a href="contact.html">Work with me</a>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">2025 Creative Solutions Consulting · All rights reserved · Krystina Wilson · <a href="tel:7607179084" style="color:var(--st7)">(760) 717-9084</a></div>
+      <div class="footer-copy">Built with intention.</div>
+    </div>
+  </div>
+</footer>
+<script>
+window.addEventListener('load', function() {
+  var toggle = document.getElementById('nav-toggle');
+  var links = document.getElementById('nav-links');
+  if (toggle) {
+    toggle.addEventListener('click', function() {
+      var open = links.classList.toggle('open');
+      this.setAttribute('aria-expanded', String(open));
+      this.querySelector('i').className = open ? 'ti ti-x' : 'ti ti-menu-2';
+    });
+  }
+  document.querySelectorAll('a[href^="#"]').forEach(function(a) {
+    a.addEventListener('click', function(e) {
+      var href = this.getAttribute('href');
+      if (!href || href === '#') return;
+      e.preventDefault();
+      var el = document.getElementById(href.slice(1));
+      if (el) window.scrollTo({top: el.getBoundingClientRect().top + window.pageYOffset - 68, behavior: 'smooth'});
+      links.classList.remove('open');
+    });
+  });
+});
+</script>
+</body>
+</html>

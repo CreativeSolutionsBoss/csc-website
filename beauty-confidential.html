@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Beauty Confidential: Conversations from the Lounge — the podcast for beauty founders, formulators, and industry leaders hosted by Krystina Wilson.">
+<title>Beauty Confidential Podcast — Creative Solutions Consulting</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.19.0/dist/tabler-icons.min.css">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --iv:#F7F4EE;--iv2:#EDE9DF;--iv3:#E5E0D4;
+  --st1:#E8E4DC;--st3:#C4BDB0;--st5:#9A9389;--st7:#6B6560;
+  --ch:#2A2724;--chs:#3D3A36;
+  --gd:#C8A96E;--gdl:#E2D0A8;--gdp:#F3EDD8;
+  --rl:rgba(100,95,88,0.14);--rls:rgba(100,95,88,0.28);
+  --serif:'Cormorant Garamond',Georgia,serif;
+  --sans:'Inter',system-ui,sans-serif;
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);color:var(--ch);background:var(--iv);line-height:1.7;font-size:16px;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%;height:auto}
+
+/* NAV */
+nav{background:var(--ch);padding:0 clamp(1.25rem,4vw,2.5rem);display:flex;align-items:center;justify-content:space-between;height:64px;border-bottom:0.5px solid rgba(200,169,110,0.18);position:sticky;top:0;z-index:100}
+.nav-logo{font-family:var(--serif);font-size:15px;letter-spacing:0.06em;color:var(--gdl);font-style:italic;white-space:nowrap}
+.nav-logo span{font-style:normal;color:var(--st5);font-size:10px;letter-spacing:0.16em;text-transform:uppercase;display:block;margin-top:-2px;font-family:var(--sans)}
+.nav-links{display:flex;gap:1.75rem;align-items:center}
+.nav-links a{font-family:var(--sans);font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--st5);transition:color 0.15s;white-space:nowrap}
+.nav-links a:hover,.nav-links a.active{color:var(--gdl)}
+.nav-links a.bc-link{color:var(--gd)}
+.nav-links a.bc-link:hover{color:var(--gdl)}
+.nav-cta{font-size:11px;letter-spacing:0.14em;text-transform:uppercase;border:0.5px solid rgba(200,169,110,0.5);color:var(--gd);padding:8px 18px;border-radius:2px;transition:background 0.15s}
+.nav-cta:hover{background:rgba(200,169,110,0.1);border-color:var(--gd)}
+.nav-toggle{display:none;background:none;border:none;cursor:pointer;padding:4px}
+.nav-toggle i{font-size:22px;color:var(--st5)}
+
+/* SHARED LAYOUT */
+.wrap{padding:clamp(3.5rem,6vw,5.5rem) clamp(1.25rem,4vw,2.5rem)}
+.inner{max-width:960px;margin:0 auto}
+.inner-sm{max-width:720px;margin:0 auto}
+.gold-rule{width:32px;height:1.5px;background:var(--gd);margin-bottom:1.35rem}
+.eyebrow{font-family:var(--sans);font-size:10.5px;letter-spacing:0.22em;text-transform:uppercase;color:var(--gd);margin-bottom:.75rem}
+.eyebrow.muted{color:var(--st5)}
+.h1{font-family:var(--serif);font-size:clamp(2.4rem,5.5vw,3.8rem);font-weight:400;font-style:italic;color:var(--gdl);line-height:1.1;margin-bottom:1.25rem}
+.h2{font-family:var(--serif);font-size:clamp(1.75rem,3.5vw,2.6rem);font-weight:400;font-style:italic;color:var(--ch);line-height:1.2;margin-bottom:1rem}
+.h2 em{font-style:normal;color:var(--gd)}
+.h2.on-dark{color:var(--gdl)}
+.h3{font-family:var(--serif);font-size:1.4rem;font-weight:400;font-style:italic;color:var(--ch);margin-bottom:.6rem}
+.body-text{font-size:14.5px;color:var(--st7);line-height:1.9}
+.rule{height:0.5px;background:var(--rl);margin:1.75rem 0}
+.section-dark{background:var(--ch)}
+.section-iv2{background:var(--iv2);border-top:0.5px solid var(--rl);border-bottom:0.5px solid var(--rl)}
+.section-iv3{background:var(--iv3);border-top:0.5px solid var(--rl)}
+
+/* BUTTONS */
+.btn{display:inline-block;font-family:var(--sans);font-size:11px;letter-spacing:0.14em;text-transform:uppercase;padding:13px 28px;border-radius:2px;cursor:pointer;text-decoration:none;transition:all 0.15s;border:none}
+.btn-primary{background:var(--gd);color:var(--ch)}
+.btn-primary:hover{background:var(--gdl)}
+.btn-ghost{background:none;color:var(--gdl);border:0.5px solid rgba(200,169,110,0.35)}
+.btn-ghost:hover{border-color:var(--gd)}
+.btn-sm{padding:10px 20px;font-size:10px}
+
+/* PAGE HERO (dark) */
+.page-hero{background:var(--ch);padding:clamp(4rem,7vw,6rem) clamp(1.25rem,4vw,2.5rem);position:relative}
+.page-hero::after{content:'';position:absolute;bottom:0;left:clamp(1.25rem,4vw,2.5rem);width:40px;height:1.5px;background:var(--gd)}
+.page-hero-eyebrow{font-family:var(--sans);font-size:10.5px;letter-spacing:0.22em;text-transform:uppercase;color:var(--st5);margin-bottom:1rem}
+.page-hero-title{font-family:var(--serif);font-size:clamp(2rem,5vw,3.2rem);font-weight:400;font-style:italic;color:var(--gdl);line-height:1.1;margin-bottom:.85rem;max-width:700px}
+.page-hero-sub{font-size:14px;color:rgba(200,185,165,0.75);max-width:540px;line-height:1.85}
+
+/* FOOTER */
+footer{background:var(--ch);padding:2.5rem clamp(1.25rem,4vw,2.5rem);border-top:0.5px solid rgba(200,169,110,0.14)}
+.footer-inner{max-width:960px;margin:0 auto}
+.footer-top{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:2rem;padding-bottom:1.5rem;border-bottom:0.5px solid rgba(255,255,255,0.06)}
+.footer-brand-name{font-family:var(--serif);font-size:1.05rem;font-style:italic;color:var(--gdl)}
+.footer-brand-tag{font-family:var(--sans);font-size:9.5px;letter-spacing:0.14em;text-transform:uppercase;color:var(--st5);margin-top:3px}
+.footer-nav{display:flex;flex-wrap:wrap;gap:.75rem 2rem;align-self:flex-start;margin-top:.35rem}
+.footer-nav a{font-family:var(--sans);font-size:10.5px;letter-spacing:0.12em;text-transform:uppercase;color:var(--st5);transition:color 0.15s}
+.footer-nav a:hover{color:var(--gdl)}
+.footer-nav a.bc-link{color:var(--gd)}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.5rem;padding-top:1.25rem}
+.footer-copy{font-family:var(--sans);font-size:10px;color:var(--st7)}
+
+/* MOBILE */
+@media(max-width:720px){
+  .nav-links{display:none}
+  .nav-links.open{display:flex;flex-direction:column;position:fixed;top:64px;left:0;right:0;background:var(--ch);padding:1.5rem;border-bottom:0.5px solid rgba(200,169,110,0.18);gap:1.35rem;z-index:99}
+  .nav-toggle{display:block}
+}
+
+.bc-badge{display:inline-block;font-family:var(--sans);font-size:10px;letter-spacing:0.18em;text-transform:uppercase;border:0.5px solid var(--gd);color:var(--gd);padding:5px 12px;border-radius:1px;margin-bottom:1.25rem}
+.episode-list{display:flex;flex-direction:column;gap:12px;margin-top:2rem}
+.episode-card{background:#fff;border:0.5px solid var(--st1);border-radius:8px;padding:1.5rem 1.75rem;display:flex;gap:1.5rem;align-items:flex-start;transition:border-color 0.15s}
+.episode-card:hover{border-color:var(--gd)}
+.ep-num{font-family:var(--serif);font-size:1.1rem;font-style:italic;color:var(--gd);flex-shrink:0;min-width:36px}
+.ep-title{font-family:var(--serif);font-size:1.1rem;font-style:italic;color:var(--ch);line-height:1.45;margin-bottom:.35rem}
+.ep-topics{font-size:11.5px;color:var(--st7)}
+.bc-logo-wrap{background:var(--iv2);border:0.5px solid var(--rls);border-radius:8px;padding:2.5rem;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+.bc-logo-img{width:200px;height:auto;border-radius:4px;margin-bottom:1.5rem}
+</style>
+</head>
+<body>
+<nav id="nav">
+  <a href="index.html" class="nav-logo">Creative Solutions Consulting<span>Beauty Product Development</span></a>
+  <div class="nav-links" id="nav-links">
+    <a href="services.html" class="">Services</a>
+    <a href="method.html" class="">The CSC Method™</a>
+    <a href="about.html" class="">About</a>
+    <a href="blog.html" class="">Insights</a>
+    <a href="beauty-confidential.html" class="bc-link active">Beauty Confidential Podcast</a>
+    <a href="contact.html" class="nav-cta ">Work with me</a>
+  </div>
+  <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false">
+    <i class="ti ti-menu-2"></i>
+  </button>
+</nav>
+
+<header class="page-hero">
+  <div class="bc-badge">Beauty Confidential Podcast</div>
+  <h1 class="page-hero-title">Conversations from the Lounge.</h1>
+  <p class="page-hero-sub">Beauty Confidential: Conversations from the Lounge brings together the people shaping the future of beauty. Founders, formulators, packaging engineers, manufacturers, retailers, regulatory experts, and creative leaders. Real conversations. Real product development. No fluff.</p>
+</header>
+
+<!-- ABOUT + LOGO -->
+<section class="wrap" style="background:var(--iv)">
+  <div class="inner">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,4rem);align-items:center">
+      <div>
+        <div class="gold-rule"></div>
+        <div class="eyebrow">About the podcast</div>
+        <h2 class="h2">Because great products deserve <em>great conversations.</em></h2>
+        <p class="body-text" style="margin-bottom:1.5rem">Every episode surfaces the hard questions beauty brands face and connects them back to the expertise CSC brings to every engagement. From supplier negotiations to regulatory strategy, from founder stories to formulation breakthroughs.</p>
+        <p style="font-family:var(--serif);font-size:1.15rem;font-style:italic;color:var(--st7);line-height:1.7;margin-bottom:1.75rem">"Every episode surfaces the hard questions beauty brands face and connects them back to the expertise CSC brings to every engagement."</p>
+        <a href="https://open.spotify.com/show/4SjmbsKrMWweE0AK68aKtX?si=306eea2a7afa4abe" target="_blank" rel="noopener" class="btn btn-primary">Listen now on Spotify</a>
+      </div>
+      <div class="bc-logo-wrap">
+        <img src="data:image/jpeg;base64,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" alt="Beauty Confidential: Conversations from the Lounge" class="bc-logo-img">
+        <div style="font-family:var(--sans);font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:var(--st5);margin-bottom:.35rem">Hosted by</div>
+        <div style="font-family:var(--serif);font-size:1.1rem;font-style:italic;color:var(--chs)">Krystina Wilson</div>
+        <div style="font-family:var(--sans);font-size:10.5px;color:var(--st7);margin-top:2px">Founder, Creative Solutions Consulting</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EPISODES -->
+<section class="wrap section-iv2">
+  <div class="inner">
+    <div class="gold-rule"></div>
+    <div class="eyebrow">Latest episodes</div>
+    <h2 class="h2">Recent <em>conversations</em></h2>
+    <div class="episode-list">
+      <div class="episode-card"><div class="ep-num">Ep 7</div><div><div class="ep-title">How an unexpected layoff became the catalyst for building a successful consulting business</div><div class="ep-topics">Career Transition · Networking · Resilience</div></div></div>
+      <div class="episode-card"><div class="ep-num">Ep 6</div><div><div class="ep-title">Explore how artificial intelligence is transforming the beauty industry without replacing the human experience</div><div class="ep-topics">AI · Personalization · Innovation</div></div></div>
+      <div class="episode-card"><div class="ep-num">Ep 5</div><div><div class="ep-title">Why product testing and claims substantiation are essential for protecting consumers, ensuring compliance, and building lasting brand credibility</div><div class="ep-topics">Claim Substantiation · Product Testing · Compliance</div></div></div>
+      <div class="episode-card"><div class="ep-num">Ep 4</div><div><div class="ep-title">Discover the ingredient, formulation, and sustainability trends shaping the future of beauty</div><div class="ep-topics">Ingredient Innovation · Sustainability · Future Trends</div></div></div>
+    </div>
+    <div style="text-align:center;margin-top:2.5rem">
+      <a href="https://open.spotify.com/show/4SjmbsKrMWweE0AK68aKtX?si=306eea2a7afa4abe" target="_blank" rel="noopener" class="btn btn-primary">Listen on Spotify</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand-name">Creative Solutions Consulting</div>
+        <div class="footer-brand-tag">Beauty Product Development · Fallbrook, CA</div>
+      </div>
+      <nav class="footer-nav">
+        <a href="services.html">Services</a>
+        <a href="method.html">The CSC Method™</a>
+        <a href="about.html">About</a>
+        <a href="blog.html">Insights</a>
+        <a href="beauty-confidential.html" class="bc-link">Beauty Confidential Podcast</a>
+        <a href="contact.html">Work with me</a>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">2025 Creative Solutions Consulting · All rights reserved · Krystina Wilson · <a href="tel:7607179084" style="color:var(--st7)">(760) 717-9084</a></div>
+      <div class="footer-copy">Built with intention.</div>
+    </div>
+  </div>
+</footer>
+<script>
+window.addEventListener('load', function() {
+  var toggle = document.getElementById('nav-toggle');
+  var links = document.getElementById('nav-links');
+  if (toggle) {
+    toggle.addEventListener('click', function() {
+      var open = links.classList.toggle('open');
+      this.setAttribute('aria-expanded', String(open));
+      this.querySelector('i').className = open ? 'ti ti-x' : 'ti ti-menu-2';
+    });
+  }
+  document.querySelectorAll('a[href^="#"]').forEach(function(a) {
+    a.addEventListener('click', function(e) {
+      var href = this.getAttribute('href');
+      if (!href || href === '#') return;
+      e.preventDefault();
+      var el = document.getElementById(href.slice(1));
+      if (el) window.scrollTo({top: el.getBoundingClientRect().top + window.pageYOffset - 68, behavior: 'smooth'});
+      links.classList.remove('open');
+    });
+  });
+});
+</script>
+</body>
+</html>
