@@ -149,7 +149,7 @@ footer{background:var(--ch);padding:2.5rem clamp(1.25rem,4vw,2.5rem);border-top:
         </div>
       </div>
       <div>
-        <form class="contact-form" action="ACTION_URL" method="POST">
+        <form class="contact-form" id="contact-form" action="https://formspree.io/f/xnpnjaaw" method="POST">
           <input type="text" name="name" placeholder="Your name" required>
           <input type="email" name="email" placeholder="Email address" required>
           <input type="text" name="brand" placeholder="Brand or project name">
@@ -162,10 +162,16 @@ footer{background:var(--ch);padding:2.5rem clamp(1.25rem,4vw,2.5rem);border-top:
             <option>Post-launch, line extensions and growth</option>
             <option>Full lifecycle, I need a partner from the start</option>
           </select>
-          <textarea name="message" placeholder="Tell me about your brand and what you're building..." required></textarea>
-          <button type="submit" class="submit">Send inquiry</button>
+          <textarea name="message" placeholder="Tell me about your brand and what you&#39;re building..." required></textarea>
+          <button type="submit" class="submit" id="submit-btn">Send inquiry</button>
         </form>
-        <p style="font-size:11px;color:var(--st5);margin-top:.75rem;font-style:italic;font-family:var(--serif)">To activate form submissions, connect this form to Formspree.io and replace ACTION_URL above.</p>
+        <div id="form-success" style="display:none;background:var(--iv2);border:0.5px solid var(--gd);border-radius:4px;padding:1.25rem 1.5rem;margin-top:1rem">
+          <p style="font-family:var(--serif);font-size:1.05rem;font-style:italic;color:var(--ch)">Thank you — your inquiry has been received. Krystina will be in touch within 1 business day.</p>
+        </div>
+        <div id="form-error" style="display:none;background:#fff8f0;border:0.5px solid #C8A96E;border-radius:4px;padding:1.25rem 1.5rem;margin-top:1rem">
+          <p style="font-family:var(--serif);font-size:1rem;font-style:italic;color:var(--ch)">Something went wrong. Please email directly at <a href="mailto:krystina@creativesolutions-consulting.com" style="color:var(--gd)">krystina@creativesolutions-consulting.com</a> or call (760) 717-9084.</p>
+        </div>
+        
       </div>
     </div>
   </div>
@@ -215,6 +221,48 @@ window.addEventListener('load', function() {
     });
   });
 });
+</script>
+<script>
+(function() {
+  var form = document.getElementById('contact-form');
+  if (!form) return;
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    var btn = document.getElementById('submit-btn');
+    var success = document.getElementById('form-success');
+    var error = document.getElementById('form-error');
+    var note = document.getElementById('formspree-note');
+
+    btn.textContent = 'Sending...';
+    btn.disabled = true;
+
+    var data = new FormData(form);
+
+    fetch(action, {
+      method: 'POST',
+      body: data,
+      headers: { 'Accept': 'application/json' }
+    })
+    .then(function(response) {
+      if (response.ok) {
+        form.style.display = 'none';
+        if (success) success.style.display = 'block';
+        if (note) note.style.display = 'none';
+      } else {
+        return response.json().then(function(data) {
+          throw new Error(data.error || 'Form submission failed');
+        });
+      }
+    })
+    .catch(function() {
+      btn.textContent = 'Send inquiry';
+      btn.disabled = false;
+      if (error) error.style.display = 'block';
+    });
+  });
+})();
 </script>
 </body>
 </html>
